@@ -1,0 +1,203 @@
+<!doctype html><html><head></head><body><!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Interactive JS Tasks</title>
+	<style>
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			background: linear-gradient(to right, #dbe6f6, #c5796d);
+			margin: 0;
+			padding: 20px;
+			color: #333;
+		}
+
+		h1 {
+			text-align: center;
+			color: #2f3542;
+		}
+
+		.task {
+			background: #ffffffdd;
+			padding: 20px;
+			border-radius: 10px;
+			margin: 20px auto;
+			max-width: 600px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+			transition: transform 0.2s ease;
+		}
+
+		.task:hover {
+			transform: scale(1.02);
+		}
+
+		h2 {
+			margin-top: 0;
+			color: black;
+		}
+
+		button {
+			background: brown;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			margin-top: 10px;
+			font-size: 15px;
+			border-radius: 6px;
+			cursor: pointer;
+			transition: background 0.3s ease;
+		}
+
+		button:hover {
+			background: #2f3542;
+		}
+
+		.output {
+			margin-top: 10px;
+			font-weight: bold;
+			color: #2f3542;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>🎯 JavaScript Practice Tasks</h1>
+
+	<!-- Task Sections -->
+	<div class="task">
+		<h2>1. Sum of Two Numbers</h2><button onclick="task1()">Run Task</button>
+		<div class="output" id="output1"></div>
+	</div>
+
+	<div class="task">
+		<h2>2. Add Three Numbers</h2><button onclick="task2()">Run Task</button>
+		<div class="output" id="output2"></div>
+	</div>
+
+	<div class="task">
+		<h2>3. Add Two Numbers and Show Alert</h2><button onclick="task3()">Run Task</button>
+	</div>
+
+	<div class="task">
+		<h2>4. Sum, Difference, Product, Quotient</h2><button onclick="task4()">Run Task</button>
+		<div class="output" id="output4"></div>
+	</div>
+
+	<div class="task">
+		<h2>5. Greet User and Show Sum</h2><button onclick="task5()">Run Task</button>
+		<div class="output" id="output5"></div>
+	</div>
+
+	<div class="task">
+		<h2>6. Add Two Numbers and Show in Console</h2><button onclick="task6()">Run Task</button>
+	</div>
+
+	<div class="task">
+		<h2>7. Check Inputs and Add</h2><button onclick="task7()">Run Task</button>
+		<div class="output" id="output7"></div>
+	</div>
+
+	<div class="task">
+		<h2>8. Add 10 to a Number</h2><button onclick="task8()">Run Task</button>
+		<div class="output" id="output8"></div>
+	</div>
+
+	<div class="task">
+		<h2>9. Check if Sum is Even or Odd</h2><button onclick="task9()">Run Task</button>
+		<div class="output" id="output9"></div>
+	</div>
+
+	<div class="task">
+		<h2>10. Calculator</h2><button onclick="task10()">Run Task</button>
+		<div class="output" id="output10"></div>
+	</div>
+
+	<script>
+		function task1() {
+                                                                                                                                                                                                                                                                                                let a = +prompt("Enter first number:");
+                                                                                                                                                                                                                                                                                                      let b = +prompt("Enter second number:");
+                                                                                                                                                                                                                                                                                                            document.getElementById("output1").innerText = `Sum: ${a + b}`;
+                                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                                    function task2() {
+                                                                                                                                                                                                                                                                                                                          let a = +prompt("Enter first number:");
+                                                                                                                                                                                                                                                                                                                                let b = +prompt("Enter second number:");
+                                                                                                                                                                                                                                                                                                                                      let c = +prompt("Enter third number:");
+                                                                                                                                                                                                                                                                                                                                            document.getElementById("output2").innerText = `Sum: ${a + b + c}`;
+                                                                                                                                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                                                                                                                                    function task3() {
+                                                                                                                                                                                                                                                                                                                                                          let a = +prompt("Enter first number:");
+                                                                                                                                                                                                                                                                                                                                                                let b = +prompt("Enter second number:");
+                                                                                                                                                                                                                                                                                                                                                                      alert(`Sum is: ${a + b}`);
+                                                                                                                                                                                                                                                                                                                                                                          }
+
+                                                                                                                                                                                                                                                                                                                                                                              function task4() {
+                                                                                                                                                                                                                                                                                                                                                                                    let a = +prompt("Enter first number:");
+                                                                                                                                                                                                                                                                                                                                                                                          let b = +prompt("Enter second number:");
+                                                                                                                                                                                                                                                                                                                                                                                                document.getElementById("output4").innerText = `
+                                                                                                                                                                                                                                                                                                                                                                                                        Sum: ${a + b}, Difference: ${a - b}, Product: ${a * b}, Quotient: ${b !== 0 ? (a / b).toFixed(2) : "undefined"}
+                                                                                                                                                                                                                                                                                                                                                                                                              `;
+                                                                                                                                                                                                                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                      function task5() {
+                                                                                                                                                                                                                                                                                                                                                                                                                            let name = prompt("Enter your name:");
+                                                                                                                                                                                                                                                                                                                                                                                                                                  let a = +prompt("Enter first number:");
+                                                                                                                                                                                                                                                                                                                                                                                                                                        let b = +prompt("Enter second number:");
+                                                                                                                                                                                                                                                                                                                                                                                                                                              document.getElementById("output5").innerText = `Hello ${name}, the sum of ${a} and ${b} is ${a + b}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                      function task6() {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            let a = parseInt(prompt("Enter first number:"));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  let b = parseInt(prompt("Enter second number:"));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        console.log("Sum:", a + b);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                function task7() {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      let a = prompt("Enter first number:");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            let b = prompt("Enter second number:");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  if (isNaN(a) || isNaN(b)) {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          document.getElementById("output7").innerText = "❌ Please enter valid numbers!";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                } else {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        document.getElementById("output7").innerText = `Sum: ${+a + +b}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      function task8() {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            let num = +prompt("Enter a number:");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  document.getElementById("output8").innerText = `Result: ${num + 10}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          function task9() {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                let a = +prompt("Enter first number:");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      let b = +prompt("Enter second number:");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            let sum = a + b;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  let type = sum % 2 === 0 ? "even" : "odd";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        document.getElementById("output9").innerText = `Sum is ${sum}, which is ${type}.`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                function task10() {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      let a = +prompt("Enter first number:");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            let b = +prompt("Enter second number:");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  let op = prompt("Enter operator (+, -, *, /, ^ for power, % for percentage):");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        let result;
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              switch(op) {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      case '+': result = a + b; break;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              case '-': result = a - b; break;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      case '*': result = a * b; break;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              case '/': result = b !== 0 ? a / b : "❌ Cannot divide by zero"; break;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      case '^': result = Math.pow(a, b); break;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              case '%': result = (a / 100) * b; break; // a% of b
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      default: result = "❌ Invalid operator!";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  document.getElementById("output10").innerText = `Result: ${result}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      }
+	</script>
+
+</body>
+
+</html></body><html>
